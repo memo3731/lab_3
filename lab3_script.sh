@@ -10,9 +10,9 @@ read fileName
 echo "Enter a regular expression:"
 read regExp
 grep "$regExp" "$fileName"
-grep -c - "regex_practice.txt" 
-grep -c @ "regex_practice.txt" 
-grep -o 303[0-9]{7} "regex_practice.txt" 
+grep -c '[0-9]\{3\}-[0-9]\{3\}\-[0-9]\{4\}' "regex_practice.txt" 
+grep -c .*@.*\.com "regex_practice.txt" 
+grep -o '303\-[0-9]\{3\}\-[0-9]\{4\}' "regex_practice.txt" 
 grep .*@geocities.com "regex_practice.txt" >> "email_results.txt" 
 git add email_results.txt
 git commit -m "committed" 
